@@ -1,0 +1,16 @@
+.toolbar {
+  padding: 20px 50px;
+  display: flex;
+  gap: 15px;
+  border-top: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
+  box-shadow: rgba(27, 31, 35, 0.04) 0px 1px 0px, rgba(255, 255, 255, 0.25) 0px 1px 0px inset;
+  overflow: auto;
+  align-items: center;
+}
+
+@media only screen and (max-width: 1250px) {
+  .toolbar {
+      padding: 10px 25px;
+  }
+}

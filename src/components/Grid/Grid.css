@@ -1,0 +1,29 @@
+@import 'ag-grid-community/dist/styles/ag-grid.css';
+@import 'ag-grid-community/dist/styles/ag-theme-alpine.css';
+
+.ag-theme-alpine .ag-root-wrapper {
+  border: solid 1px;
+  border-color: #e2e8f0;
+  border-color: var(--ag-border-color, #e2e8f0);
+  box-shadow: rgba(27, 31, 35, 0.04) 0px 1px 0px, rgba(255, 255, 255, 0.25) 0px 1px 0px inset;
+}
+
+.theme-bordered  .ag-root-wrapper {
+  border-radius: 10px;
+}
+
+.ag-theme-alpine .ag-header-cell-label {
+  justify-content: center;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.ag-theme-alpine {
+  --ag-borders: none;
+  --ag-borders-row: solid 1px;
+  --ag-row-border-color: #e2e8f0;
+}
+
+.theme-bordered .ag-ltr .ag-cell  {
+  border-right: 1px solid #e2e8f0;
+}
