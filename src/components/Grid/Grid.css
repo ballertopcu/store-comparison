@@ -27,3 +27,12 @@
 .theme-bordered .ag-ltr .ag-cell  {
   border-right: 1px solid #e2e8f0;
 }
+
+@media only screen and (max-width: 1250px) {
+  .ag-theme-alpine .ag-header-cell-label {
+    font-size: 12px;
+  }
+  .ag-theme-alpine .ag-ltr .ag-cell  {
+    font-size: 12px;
+  }
+}

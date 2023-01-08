@@ -4,18 +4,26 @@ import { Grid } from "../Grid";
 import { Search } from "../Search";
 import { Carousel } from "../Grid/Carousel";
 import styles from './InteractionAnalysis.module.css'
+import { FilterModal } from "../FilterModal";
 
 export const InteractionAnalysis = () => {
+
+  const [open, setOpen] = useState(false)
+
+  const openModal = () => {
+    setOpen(true)
+  }
+
   const handlers = [
-    { text: "Group By", variant: "outlined", icon: "grid", selected: true },
-    { text: "Performance Index", variant: "outlined", icon: "chart-bar" },
-    { text: "Store", variant: "outlined", icon: "store", selected: true },
-    { text: "Product", variant: "outlined", icon: "package" },
-    { text: "Device", variant: "outlined", icon: "device" },
-    { text: "Session", variant: "outlined", icon: "share" },
-    { text: "24.01.2022 - 31.01.2023", variant: "outlined", icon: "calendar" },
-    { text: "Edit Colums", variant: "outlined", icon: "adjustments" },
-    { text: "Clear All", style: { color: "#0284c7" } },
+    { key: '1', text: "Group By", variant: "outlined", icon: "grid", selected: true },
+    { key: '2', text: "Performance Index", variant: "outlined", icon: "chart-bar" },
+    { key: '3', text: "Store", variant: "outlined", icon: "store", onClick: openModal},
+    { key: '4', text: "Product", variant: "outlined", icon: "package" },
+    { key: '5', text: "Device", variant: "outlined", icon: "device" },
+    { key: '6', text: "Session", variant: "outlined", icon: "share" },
+    { key: '7', text: "24.01.2022 - 31.01.2023", variant: "outlined", icon: "calendar" },
+    { key: '8', text: "Edit Colums", variant: "outlined", icon: "adjustments" },
+    { key: '9', text: "Clear All", style: { color: "#0284c7" } },
   ];
 
   const initialRowData = [
@@ -227,6 +235,7 @@ export const InteractionAnalysis = () => {
   return (
     <>
       <Toolbar handlers={handlers} />
+      <FilterModal open={open} handleClose={() => setOpen(false)}/>
       <div className={styles.gridContainer}>
         <Grid
           style={{ width: "100%", height: "261px" }}

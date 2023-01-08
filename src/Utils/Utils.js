@@ -15,7 +15,8 @@ import {
   HiOutlineChevronRight,
   HiOutlineTrendingUp,
   HiOutlineTrendingDown,
-  HiOutlineMenu
+  HiOutlineMenu,
+  HiX
 } from "react-icons/hi";
 import { FiSearch } from "react-icons/fi";
 import { BiBarChartAlt2, BiPackage } from "react-icons/bi";
@@ -45,6 +46,7 @@ const Utils = {
     else if (name === "increase")return <HiOutlineTrendingUp size={size}/>;
     else if (name === "decrease")return <HiOutlineTrendingDown size={size}/>;
     else if (name === "menu")return <HiOutlineMenu size={size}/>;
+    else if (name === "x")return <HiX size={size}/>;
   },
   getPage: (key) => {
     if (key === 2) return <InteractionAnalysis/>;
