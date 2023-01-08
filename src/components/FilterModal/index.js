@@ -8,6 +8,7 @@ import styles from "./FilterModal.module.css";
 import TextField from "@mui/material/TextField";
 import Utils from "../../Utils/Utils";
 import Switch from "@mui/material/Switch";
+import { Button } from "../Button";
 
 const style = {
   position: "absolute",
@@ -27,10 +28,17 @@ const style = {
 export const FilterModal = ({ open, handleClose }) => {
   const [store, setStore] = useState("");
   const [stock, setStock] = useState("");
+  const [sales, setSales] = useState(false);
 
   const handleChange = (event, setEvent) => {
     setEvent(event.target.value);
   };
+
+  const clear = () => {
+    setStore('')
+    setStock('')
+    setSales(false)
+  }
 
   return (
     <Modal
@@ -74,7 +82,21 @@ export const FilterModal = ({ open, handleClose }) => {
             fontWeight: "400",
           }}
         >
-          Increased Sales <Switch defaultChecked />
+          Increased Sales <Switch checked={sales} onChange={(e) => setSales(e.target.checked)}/>
+        </div>
+        <div className={styles.footer}>
+          <Button onClick={clear} style={{ textDecoration: "underline" }}>Clear All</Button>
+          <Button
+            onClick={handleClose}
+            style={{
+              backgroundColor: "#334155",
+              color: "#fff",
+              borderRadius: "10px",
+              fontWeight: "500",
+            }}
+          >
+            Show
+          </Button>
         </div>
       </Box>
     </Modal>

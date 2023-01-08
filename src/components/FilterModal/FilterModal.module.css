@@ -12,3 +12,10 @@
   top: 35px;
   cursor: pointer;
 }
+
+.footer {
+  padding-top: 10px;
+  border-top: 1px solid #e2e8f0;
+  display: flex;
+  justify-content: space-between;
+}
