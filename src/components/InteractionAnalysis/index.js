@@ -254,9 +254,19 @@ export const InteractionAnalysis = () => {
             <Search />
           </div>
           <Grid
-            style={{ width: "100%", height: "387px" }}
+            style={{ width: "100%", height: "430px" }}
             rowData={bottomRowData}
             columnDefs={columnDefs}
+            pinnedBottomRowData= {[
+              {
+                stores: "Total",
+                avg_stock: "Total",
+                interaction: "Total",
+                sales: "Total",
+                conversion: "Total",
+              },
+            ]}
+            
           />
           <div
             style={{
